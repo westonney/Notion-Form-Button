@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Notion Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <button class="button" onclick="openNotionForm()">Open Form</button>
+
+    <script>
+        function openNotionForm() {
+            const notionFormURL = "https://www.notion.so/1ae99fb46dd98091ac89c2c6c91d7a2d?pvs=106";
+            const width = 800;
+            const height = 600;
+            const left = (window.innerWidth - width) / 2;
+            const top = (window.innerHeight - height) / 2;
+
+            window.open(notionFormURL, "NotionForm", `width=${width},height=${height},top=${top},left=${left},resizable=yes,scrollbars=yes`);
+        }
+    </script>
+</body>
+</html>
